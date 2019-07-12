@@ -9,5 +9,4 @@ public class EverisProjectApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EverisProjectApplication.class, args);
 	}
-
 }
