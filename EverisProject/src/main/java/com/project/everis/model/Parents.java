@@ -42,7 +42,7 @@ public class Parents {
 			inverseJoinColumns=@JoinColumn(name="studentid",
 			referencedColumnName = "studentid"))
 	private Collection<Students> studentsreferences;
-	
+
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="headoffamilyparentid")
 	@JsonProperty("familyreferencestoparents")
