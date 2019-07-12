@@ -19,14 +19,13 @@ public class Families {
 	@Column(name="familyname", length = 20)
 	private String familyname;
 	
-	@OneToMany(mappedBy = "parentsreferencestofamily", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "parentsreferencestofamily", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JsonProperty("parentsreferencestofamily")
 	private Collection<Parents> familyreferencestoparents;
 	
-	@OneToMany(mappedBy = "familyMembersReferencestoFamily" , fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "familyMembersReferencestoFamily" , fetch = FetchType.EAGER)
 	@JsonIgnoreProperties("familyMembersReferencestoFamily")
 	private List<FamilyMembers> familiesReferencesToFamilyMenbers;
-	
 
 	public int getFamilyid() {
 		return familyid;
@@ -52,7 +51,4 @@ public class Families {
 		this.familyname = familyname;
 	}
 
-	
-	
-	
 }

@@ -36,7 +36,7 @@ public class ParentsRestController {
 	@PutMapping(value= "putparents")
 	public Parents updateParents(@RequestBody Parents parents){
 			return parentsService.updateParents(parents);
-	}
+	}	
 		
 	@DeleteMapping("/deleteparents/{parentid}")
 	public void deleteParents(@PathVariable("parentid") Integer parentid) {

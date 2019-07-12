@@ -43,7 +43,7 @@ public class Parents {
 			referencedColumnName = "studentid"))
 	private Collection<Students> studentsreferences;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="headoffamilyparentid")
 	@JsonProperty("familyreferencestoparents")
 	private Families parentsreferencestofamily;

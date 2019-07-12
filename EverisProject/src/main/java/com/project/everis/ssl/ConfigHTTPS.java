@@ -13,7 +13,7 @@ public class ConfigHTTPS {
 
 	 @Bean
 	 public ServletWebServerFactory servletContainer() {
-	        TomcatServletWebServerFactory tomcatservlet = new TomcatServletWebServerFactory() {
+	        TomcatServletWebServerFactory tomcats = new TomcatServletWebServerFactory() {
 	            @Override
 	            protected void postProcessContext(Context context) {
 	                SecurityConstraint securityConstraint = new SecurityConstraint();
@@ -24,6 +24,6 @@ public class ConfigHTTPS {
 	                context.addConstraint(securityConstraint);
 	            }
 	        };   
-	        return tomcatservlet;
+	        return tomcats;
 	    }  
 }

@@ -39,7 +39,7 @@ public class Students {
 	@JsonIgnoreProperties("studentsreferences")
 	private Collection<Parents> parentsReferences;
 	
-	@OneToMany(mappedBy = "studentsreferencestofamilymember", fetch = FetchType.LAZY, orphanRemoval = true)
+	@OneToMany(mappedBy = "studentsreferencestofamilymember", fetch = FetchType.EAGER, orphanRemoval = true)
 	@JsonIgnoreProperties("studentsreferencestofamilymember")
 	private List<FamilyMembers> studentReferencesToFamilyMembers;
 
