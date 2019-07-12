@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.List;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -16,6 +17,7 @@ public class Families {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int familyid;
 	
+	@NotNull
 	@Column(name="familyname", length = 20)
 	private String familyname;
 	

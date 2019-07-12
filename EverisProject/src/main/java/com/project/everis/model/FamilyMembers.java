@@ -1,6 +1,7 @@
 package com.project.everis.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -23,6 +24,7 @@ public class FamilyMembers  {
 	@JsonIgnoreProperties("parentsReferencestoFamilyMembers")
 	private Parents familymembersreferencestoparents;	
 	
+	@NotNull
 	@Column(name="parentorstudentmember")
 	private String parentorstudentmember;
 	

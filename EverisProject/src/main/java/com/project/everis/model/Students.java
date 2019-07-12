@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -17,15 +18,19 @@ public class Students {
 	@Column(name="studentid")
 	private int studentid;
 	
+	@NotNull
 	@Column(name="gender")
 	private String gender;
 	
+	@NotNull
 	@Column(name="firstname")
 	private String firstname;
 	
+	@NotNull
 	@Column(name="middlename")
 	private String middlename;
 	
+	@NotNull
 	@Column(name="lastname")
 	private String lastname;
 	
